@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
     font-family: TikTok Sans, monospace;
 }
@@ -54,15 +54,16 @@ nav {
 
 .nav_contacts {
     background-color: #6D5B6A;
-    gap: 135px;
     height: 40px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 a {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    gap: 5px;
 }
 
 .nav_maps {
@@ -95,25 +96,18 @@ nav > a {
 
 .nav_info {
     display: flex;
-    justify-content: center;
-    gap: 45px;
-    width: 100%;
+    justify-content: space-around;
 }
 
-.nav_info_container_1 {
+.nav_info_container_1,
+.nav_info_container_3 {
     display: flex;
-    justify-content: flex-start;
-    gap: 57px;
-}
-
-.nav_info_container_2 {
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
+    justify-content: space-between;
 }
 
 .nav_info_container_1 > a,
-.nav_info_container_2 > a {
+.nav_info_container_2 > a,
+.nav_info_container_3 > a {
     color: #6D5B6A;
     text-transform: uppercase;
     font-family: "Literal Regular", sans-serif;
