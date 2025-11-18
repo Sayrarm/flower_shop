@@ -8,6 +8,8 @@ html, body {
     height: 100%;
 }
 
+/*************************ШРИФТЫ*******************************/
+
 @font-face {
     font-family: 'Literal Light';
     font-style: normal;
@@ -30,6 +32,8 @@ html, body {
     src: local('Literal Regular'), url('/fonts/literal/Literal - Regular (Personal use).woff') format('woff');
 }
 
+/*************************BODY*******************************/
+
 html {
     scroll-behavior: smooth;
 }
@@ -44,6 +48,8 @@ body > *:not(header){
     max-width: 1115px;
     margin: 0 auto;
 }
+
+/*************************HEADER*******************************/
 
 header {
     display: flex;
@@ -128,6 +134,8 @@ nav > a {
     font-size: 14px;
     text-decoration: none;
 }
+
+/*************************MAIN PAGE*******************************/
 
 
 
