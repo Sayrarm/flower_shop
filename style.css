@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,4 +16,14 @@ body {
     width: 1140px;
     margin: 0 auto;
     font-family: TikTok Sans, monospace;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_contacts {
+    background-color: #6D5B6A;
 }
