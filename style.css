@@ -9,6 +9,12 @@ html, body {
 }
 
 /*************************ШРИФТЫ*******************************/
+@font-face {
+    font-family: 'Karton Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Karton Regular'), url('/fonts/karton/Karton-Regular.ttf') format('truetype');
+}
 
 @font-face {
     font-family: 'Literal Light';
@@ -135,8 +141,44 @@ nav > a {
     text-decoration: none;
 }
 
-/*************************MAIN PAGE*******************************/
+/*************************MAIN PAGE H1*******************************/
 
+.main_page {
+    height: 400px;
+    background-image: url('/images/background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+h1 {
+    font-family: "Karton Regular", sans-serif;
+    font-size: 35px;
+}
+
+h1 span {
+    color: #6AAE55;
+}
+
+.h1 {
+    font-family: "Karton Regular", sans-serif;
+    font-size: 65px;
+    letter-spacing: 6px;
+}
+
+.button_catalog {
+    margin-top: 35px;
+    padding: 15px 65px;
+    background-color: #6AAE55;
+    font-family: "Literal Bold", sans-serif;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
 
