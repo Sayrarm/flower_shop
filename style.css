@@ -63,6 +63,7 @@ nav {
     height: 40px;
     display: flex;
     justify-content: center;
+    gap: 145px;
 }
 
 a {
@@ -96,19 +97,26 @@ nav > a {
     font-size: 16px;
 }
 
+.nav_tel {
+    gap: 20px;
+}
+
 .nav_basket {
     text-transform: uppercase;
+    gap: 10px;
 }
 
 .nav_info {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav_info_container_1,
 .nav_info_container_3 {
+    width: 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .nav_info_container_1 > a,
