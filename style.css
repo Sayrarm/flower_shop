@@ -8,12 +8,34 @@ html, body {
     height: 100%;
 }
 
+@font-face {
+    font-family: 'Literal Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Literal Light'), url('/fonts/literal/Literal - Light (Personal use).woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Literal Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Literal Bold'), url('/fonts/literal/Literal - Bold (Personal use).woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Literal Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Literal Regular'), url('/fonts/literal/Literal - Regular (Personal use).woff') format('woff');
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    width: 1140px;
+    width: 100%;
     margin: 0 auto;
     font-family: TikTok Sans, monospace;
 }
@@ -24,6 +46,81 @@ header {
     align-items: center;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav_contacts {
     background-color: #6D5B6A;
+    gap: 135px;
+    height: 40px;
+    width: 100%;
 }
+
+a {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav_maps {
+    font-family: "Literal Regular", sans-serif;
+    font-size: 16px;
+}
+
+.nav_maps span {
+    color: #6AAE55;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+.nav_contacts > a {
+    color: white;
+}
+
+.nav_maps span,
+.nav_tel,
+.nav_basket {
+    font-family: "Literal Bold", sans-serif;
+    font-size: 16px;
+}
+
+.nav_basket {
+    text-transform: uppercase;
+}
+
+.nav_info {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+}
+
+.nav_info_container_1 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 57px;
+}
+
+.nav_info_container_2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.nav_info_container_1 > a,
+.nav_info_container_2 > a {
+    color: #6D5B6A;
+    text-transform: uppercase;
+    font-family: "Literal Regular", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+
+
