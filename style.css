@@ -54,7 +54,8 @@ body {
 .product_cards_container,
 .order_info,
 .reviews_container,
-.disclaimer_container {
+.disclaimer_container,
+.footer_upper_nav {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -418,4 +419,25 @@ h1 span {
     font-family: var(--literal-regular), sans-serif;
     font-size: 16px;
     color: var(--gray);
+}
+
+/*************************footer***************************/
+
+.upper_nav_container {
+    background-color: #746471;
+    height: 80px;
+}
+
+.footer_upper_nav {
+    display: flex;
+    justify-content: space-between; /* Теперь будет работать */
+    align-items: center;
+    height: 100%;
+}
+
+.footer_upper_nav > a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
 }
