@@ -45,11 +45,15 @@ html {
 }
 
 body {
+    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
 }
 
-body > *:not(header, footer){
+.nav_info,
+.advantages,
+.product_cards_container,
+.order_info,
+.reviews_container {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -209,7 +213,8 @@ h1 span {
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .advantages_card {
@@ -316,9 +321,19 @@ h1 span {
 /*************************MAIN PAGE reviews***************************/
 
 .reviews {
-    display: grid;
-    grid-template-columns: 32% 8% 60%;
+    width: 100%;
     background-color: var(--white-gray);
+}
+
+.reviews_container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.reviews_comments {
+    width: 60%;
 }
 
 .reviews_photos_title {
