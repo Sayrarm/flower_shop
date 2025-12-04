@@ -47,12 +47,16 @@ html {
 body {
     width: 100%;
     margin: 0 auto;
-    font-family: TikTok Sans, monospace;
 }
 
 body > *:not(header){
     max-width: 1115px;
     margin: 0 auto;
+}
+
+:root {
+    --brown: #6D5B6A;
+    --green: #6AAE55;
 }
 
 /*************************HEADER*******************************/
@@ -70,7 +74,7 @@ nav {
 }
 
 .nav_contacts {
-    background-color: #6D5B6A;
+    background-color: var(--brown);
     width: 100%;
     height: 40px;
     display: flex;
@@ -91,7 +95,7 @@ a {
 }
 
 .nav_maps span {
-    color: #6AAE55;
+    color: var(--green);
 }
 
 nav > a {
@@ -134,7 +138,7 @@ nav > a {
 .nav_info_container_1 > a,
 .nav_info_container_2 > a,
 .nav_info_container_3 > a {
-    color: #6D5B6A;
+    color: var(--brown);
     text-transform: uppercase;
     font-family: "Literal Regular", sans-serif;
     font-size: 14px;
@@ -161,7 +165,7 @@ h1 {
 }
 
 h1 span {
-    color: #6AAE55;
+    color: var(--green);
 }
 
 .h1 {
@@ -173,12 +177,38 @@ h1 span {
 .button_catalog {
     margin-top: 35px;
     padding: 15px 65px;
-    background-color: #6AAE55;
+    background-color: var(--green);
     font-family: "Literal Bold", sans-serif;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-size: 18px;
     text-transform: uppercase;
+}
+
+/*************************MAIN PAGE advantages*******************************/
+
+.advantages {
+    height: 225px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.advantages_card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Literal Bold", sans-serif;
+    font-size: 18px;
+    color: var(--brown);
+}
+
+.advantages_card span {
+    color: var(--green);
 }
 
