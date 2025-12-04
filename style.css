@@ -55,8 +55,12 @@ body > *:not(header){
 }
 
 :root {
-    --brown: #6D5B6A;
+    --brown: #5B4A58;
     --green: #6AAE55;
+    --karton-regular: "Karton Regular", sans-serif;
+    --literal-light: "Literal Light", sans-serif;
+    --literal-bold: "Literal Bold", sans-serif;
+    --literal-regular: "Literal Regular", sans-serif;
 }
 
 /*************************HEADER*******************************/
@@ -90,7 +94,7 @@ a {
 }
 
 .nav_maps {
-    font-family: "Literal Regular", sans-serif;
+    font-family: var(--literal-regular), sans-serif;
     font-size: 16px;
 }
 
@@ -109,7 +113,7 @@ nav > a {
 .nav_maps span,
 .nav_tel,
 .nav_basket {
-    font-family: "Literal Bold", sans-serif;
+    font-family: var(--literal-bold), sans-serif;
     font-size: 16px;
 }
 
@@ -140,7 +144,7 @@ nav > a {
 .nav_info_container_3 > a {
     color: var(--brown);
     text-transform: uppercase;
-    font-family: "Literal Regular", sans-serif;
+    font-family: var(--literal-regular), sans-serif;
     font-size: 14px;
     text-decoration: none;
 }
@@ -160,8 +164,9 @@ nav > a {
 }
 
 h1 {
-    font-family: "Karton Regular", sans-serif;
+    font-family: var(--karton-regular), sans-serif;
     font-size: 35px;
+    color: var(--brown);
 }
 
 h1 span {
@@ -169,16 +174,17 @@ h1 span {
 }
 
 .h1 {
-    font-family: "Karton Regular", sans-serif;
+    font-family: var(--karton-regular), sans-serif;
     font-size: 65px;
     letter-spacing: 6px;
+    color: var(--brown);
 }
 
 .button_catalog {
     margin-top: 35px;
     padding: 15px 65px;
     background-color: var(--green);
-    font-family: "Literal Bold", sans-serif;
+    font-family: var(--literal-bold), sans-serif;
     color: white;
     text-decoration: none;
     border-radius: 10px;
@@ -203,12 +209,98 @@ h1 span {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: "Literal Bold", sans-serif;
+    font-family: var(--literal-bold), sans-serif;
     font-size: 18px;
     color: var(--brown);
 }
 
 .advantages_card span {
     color: var(--green);
+}
+
+/*************************MAIN PAGE product_cards*******************************/
+
+/*************************MAIN PAGE order_info_points***************************/
+
+.order_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.order_info_points {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 0;
+
+}
+
+.order_info_point {
+    display: flex;
+    align-items: center;
+}
+
+.order_info_title {
+    font-family: var(--karton-regular), sans-serif;
+    font-size: 24px;
+    color: var(--brown);
+}
+
+.order_info_title span {
+    color: var(--green);
+}
+
+.order_info_h3 {
+    font-family: var(--literal-bold), sans-serif;
+    color: var(--green);
+    font-size: 18px;
+}
+
+.order_info_p {
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--brown);
+    font-size: 16px;
+}
+
+.order_info_point_button {
+    font-family: var(--literal-light), sans-serif;
+    color: var(--brown);
+    font-size: 50px;
+
+    text-decoration: none;
+    width: 86px;
+    height: 86px;
+    min-width: 86px !important;
+    min-height: 86px !important;
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    background-color: white;
+    margin: 50px 30px;
+
+    position: relative;
+    transition: border 0.2s, color 0.2s;
+}
+
+/* Создаем декоративный элемент вокруг кнопки */
+.order_info_point_button::before {
+    content: "";
+    position: absolute;
+    top: -24px; /* Отступ наружу от кнопки */
+    left: -24px;
+    right: -24px;
+    bottom: -24px;
+    background-image: url(/images/order-info-points/twigs.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Помещаем под кнопку */
+    pointer-events: none; /* Чтобы не мешало кликам */
+}
+
+.order_info_point_button:hover {
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
