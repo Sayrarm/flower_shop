@@ -13,14 +13,14 @@ html, body {
     font-family: 'Karton Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Karton Regular'), url('/fonts/karton/Karton-Regular.ttf') format('truetype');
+    src: local('Karton Regular'), url('fonts/karton/Karton-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Literal Light';
     font-style: normal;
     font-weight: normal;
-    src: local('Literal Light'), url('/fonts/literal/Literal - Light (Personal use).woff') format('woff');
+    src: local('Literal Light'), url('fonts/literal/Literal - Light (Personal use).woff') format('woff');
 }
 
 
@@ -28,14 +28,14 @@ html, body {
     font-family: 'Literal Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Literal Bold'), url('/fonts/literal/Literal - Bold (Personal use).woff') format('woff');
+    src: local('Literal Bold'), url('fonts/literal/Literal - Bold (Personal use).woff') format('woff');
 }
 
 @font-face {
     font-family: 'Literal Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Literal Regular'), url('/fonts/literal/Literal - Regular (Personal use).woff') format('woff');
+    src: local('Literal Regular'), url('fonts/literal/Literal - Regular (Personal use).woff') format('woff');
 }
 
 /*************************BODY*******************************/
@@ -153,7 +153,7 @@ nav > a {
 
 .main_page {
     height: 400px;
-    background-image: url('/images/background.svg');
+    background-image: url('images/background.svg');
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -291,7 +291,7 @@ h1 span {
     left: -24px;
     right: -24px;
     bottom: -24px;
-    background-image: url(/images/order-info-points/twigs.svg);
+    background-image: url(images/order-info-points/twigs.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
