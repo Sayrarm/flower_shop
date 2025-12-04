@@ -176,7 +176,7 @@ h1 span {
 .h1 {
     font-family: var(--karton-regular), sans-serif;
     font-size: 65px;
-    letter-spacing: 6px;
+    letter-spacing: 8px;
     color: var(--brown);
 }
 
@@ -303,4 +303,6 @@ h1 span {
     color: var(--green);
     border: 1px solid var(--green);
 }
+
+/*************************MAIN PAGE reviews***************************/
 
