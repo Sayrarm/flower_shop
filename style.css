@@ -49,14 +49,17 @@ body {
     margin: 0 auto;
 }
 
-body > *:not(header){
+body > *:not(header, footer){
     max-width: 1115px;
     margin: 0 auto;
 }
 
+
 :root {
     --brown: #5B4A58;
     --green: #6AAE55;
+    --gray: #828282;
+    --white-gray: #F9F8FB;
     --karton-regular: "Karton Regular", sans-serif;
     --literal-light: "Literal Light", sans-serif;
     --literal-bold: "Literal Bold", sans-serif;
@@ -147,6 +150,12 @@ nav > a {
     font-family: var(--literal-regular), sans-serif;
     font-size: 14px;
     text-decoration: none;
+}
+
+/*************************MAIN PAGE*******************************/
+
+section {
+    margin: 20px 0;
 }
 
 /*************************MAIN PAGE H1*******************************/
@@ -242,13 +251,13 @@ h1 span {
     align-items: center;
 }
 
-.order_info_title {
+.order_info_title_h2 {
     font-family: var(--karton-regular), sans-serif;
     font-size: 24px;
     color: var(--brown);
 }
 
-.order_info_title span {
+.order_info_title_h2 span {
     color: var(--green);
 }
 
@@ -305,4 +314,79 @@ h1 span {
 }
 
 /*************************MAIN PAGE reviews***************************/
+
+.reviews {
+    display: grid;
+    grid-template-columns: 32% 8% 60%;
+    background-color: var(--white-gray);
+}
+
+.reviews_photos_title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.reviews_photos_img {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 21px;
+}
+
+.reviews_title_h2 {
+    font-family: var(--karton-regular), sans-serif;
+    font-size: 26px;
+    color: var(--brown);
+}
+
+.reviews_title_h2 span {
+    color: var(--green);
+}
+
+.reviews_a {
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--green);
+    font-size: 16px;
+    text-decoration: underline dotted;
+    text-underline-offset: 6px;
+}
+
+.reviews_comment_card {
+    margin-bottom: 10px;
+}
+
+.reviews_comment_card_block_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.reviews_comment_card_block_2 {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.reviews_comment_card_block_2 > p {
+    margin-bottom: 15px;
+}
+
+.name_reviewer {
+    font-family: var(--literal-bold), sans-serif;
+    color: var(--green);
+}
+
+.name_reviewer span {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+.text_comment {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
+    color: var(--brown);
+}
 
