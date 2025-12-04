@@ -53,7 +53,8 @@ body {
 .advantages,
 .product_cards_container,
 .order_info,
-.reviews_container {
+.reviews_container,
+.disclaimer_container {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -64,6 +65,7 @@ body {
     --green: #6AAE55;
     --gray: #828282;
     --white-gray: #F9F8FB;
+    --yellow-gray: #F0F0F0;
     --karton-regular: "Karton Regular", sans-serif;
     --literal-light: "Literal Light", sans-serif;
     --literal-bold: "Literal Bold", sans-serif;
@@ -158,9 +160,6 @@ nav > a {
 
 /*************************MAIN PAGE*******************************/
 
-section {
-    margin: 20px 0;
-}
 
 /*************************MAIN PAGE H1*******************************/
 
@@ -405,3 +404,18 @@ h1 span {
     color: var(--brown);
 }
 
+/*************************MAIN PAGE disclaimer***************************/
+
+.disclaimer {
+    background-color: var(--yellow-gray);
+}
+
+.disclaimer_container {
+    padding: 50px 0;
+}
+
+.disclaimer_container > p {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
+    color: var(--gray);
+}
