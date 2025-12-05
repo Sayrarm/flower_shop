@@ -55,7 +55,8 @@ body {
 .order_info,
 .reviews_container,
 .disclaimer_container,
-.footer_upper_nav {
+.upper_nav_container,
+.center_nav_container {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -67,6 +68,7 @@ body {
     --gray: #828282;
     --white-gray: #F9F8FB;
     --yellow-gray: #F0F0F0;
+    --shadow-brown: #A29BB4;
     --karton-regular: "Karton Regular", sans-serif;
     --literal-light: "Literal Light", sans-serif;
     --literal-bold: "Literal Bold", sans-serif;
@@ -423,21 +425,147 @@ h1 span {
 
 /*************************footer***************************/
 
-.upper_nav_container {
+footer {
     background-color: #746471;
-    height: 80px;
 }
 
 .footer_upper_nav {
+    height: 80px;
+    border-bottom: 1px solid var(--shadow-brown);
+}
+
+.upper_nav_container {
     display: flex;
-    justify-content: space-between; /* Теперь будет работать */
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-.footer_upper_nav > a {
+.upper_nav_container > a {
     text-decoration: none;
     color: white;
     font-family: var(--literal-regular), sans-serif;
     font-size: 16px;
+}
+
+.footer_center_nav {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--shadow-brown);
+}
+
+.center_nav_container {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    align-items: start;
+}
+
+.footer_center_nav_block_1 > h3,
+.footer_center_nav_block_2 > h3,
+.footer_center_nav_block_3 > h3 {
+    font-family: var(--literal-bold), sans-serif;
+    font-size: 18px;
+    color: var(--green);
+}
+
+.footer_center_nav_block_1 > div,
+.footer_center_nav_block_2 > a {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.footer_center_nav_block_2 > a {
+    text-decoration: none;
+}
+
+form > * {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+form {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "name phone"
+    "textarea textarea"
+    ". submit";
+    gap: 5px;
+}
+
+#name_input {
+    grid-area: name;
+}
+#phone_input {
+    grid-area: phone;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding-bottom: 2px;
+}
+
+textarea {
+    grid-area: textarea;
+    height: 70px;
+}
+
+input, textarea {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.footer_center_nav_block_1,
+.footer_center_nav_block_2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_center_nav_block_1 > div,
+.footer_center_nav_block_2 > a {
+    margin-bottom: 20px;
+}
+
+.footer_center_nav_block_1 > h3,
+.footer_center_nav_block_2 > h3,
+.footer_center_nav_block_3 > h3 {
+    margin-bottom: 15px;
+}
+
+#button_submit {
+    grid-area: submit;
+    background-color: var(--green);
+    font-family: var(--literal-bold), sans-serif;
+    font-size: 16px;
+    height: 40px;
+}
+
+.footer_bottom_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--shadow-brown);
+}
+
+.footer_bottom_nav > div > a {
+    text-decoration: none;
+    color: var(--shadow-brown);
+}
+
+.footer_bottom_nav > div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
