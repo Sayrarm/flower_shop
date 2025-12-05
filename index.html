@@ -93,19 +93,22 @@
             <aside>
                 <form role="search" aria-label="Поиск по сайту">
                     <label for="search-input" class="visually-hidden">Поиск товаров</label>
-                    <input type="search" id="search-input" name="q" placeholder="Найти букет..." aria-describedby="search-hint">
+                    <input type="search" id="search-input" name="q" placeholder="Найти букет..."
+                           aria-describedby="search-hint">
                     <button class="search_submit" type="submit" aria-label="Искать">🔍</button>
+                </form>
 
+                <form>
                     <fieldset>
                         <legend>Стоимость:</legend>
-                        <input id="2500" name="price[]" value="2500" type="checkbox">
-                        <label for="2500">до 2500 руб.</label>
-                        <input id="2500-4000" name="price[]" value="2500" type="checkbox">
-                        <label for="2500-4000">2500 - 4000 руб.</label>
-                        <input id="4000-6000" name="price[]" value="2500" type="checkbox">
-                        <label for="4000-6000">4000 - 6000 руб.</label>
-                        <input id="6000" name="price[]" value="2500" type="checkbox">
-                        <label for="6000">от 6000 руб.</label>
+                        <input id="price-2500" name="price[]" value="0-2500" type="checkbox">
+                        <label for="price-2500">до 2500 руб.</label>
+                        <input id="price-2500-4000" name="price[]" value="2500-4000" type="checkbox">
+                        <label for="price-2500-4000">2500 - 4000 руб.</label>
+                        <input id="price-4000-6000" name="price[]" value="4000-6000" type="checkbox">
+                        <label for="price-4000-6000">4000 - 6000 руб.</label>
+                        <input id="price-6000" name="price[]" value="6000+" type="checkbox">
+                        <label for="price-6000">от 6000 руб.</label>
                     </fieldset>
 
                     <fieldset>
@@ -130,40 +133,38 @@
 
                     <fieldset>
                         <legend>Цветы упакованы:</legend>
-                        <input id="bouquet" name="price[]" value="bouquet" type="checkbox">
+                        <input id="bouquet" name="packing[]" value="bouquet" type="checkbox">
                         <label for="bouquet">Букетом</label>
-                        <input id="basket" name="price[]" value="basket" type="checkbox">
+                        <input id="basket" name="packing[]" value="basket" type="checkbox">
                         <label for="basket">В корзине</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <input id="box" name="packing[]" value="box" type="checkbox">
                         <label for="box">В коробке</label>
 
-                        <button>Показать еще</button>
+                        <button type="button">Показать еще</button>
                     </fieldset>
 
                     <fieldset>
                         <legend>Цветовая гамма:</legend>
-                        <input id="bouquet" name="price[]" value="bouquet" type="checkbox">
-                        <label for="bouquet">Белая</label>
-                        <input id="basket" name="price[]" value="basket" type="checkbox">
-                        <label for="basket">Розовая</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Красная</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Желтая</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Оранжевая</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Бордовая</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Синяя</label>
-                        <input id="box" name="price[]" value="box" type="checkbox">
-                        <label for="box">Фиолетовая</label>
+                        <input id="white" name="color[]" value="white" type="checkbox">
+                        <label for="white">Белая</label>
+                        <input id="pink" name="color[]" value="pink" type="checkbox">
+                        <label for="pink">Розовая</label>
+                        <input id="red" name="color[]" value="red" type="checkbox">
+                        <label for="red">Красная</label>
+                        <input id="yellow" name="color[]" value="yellow" type="checkbox">
+                        <label for="yellow">Желтая</label>
+                        <input id="orange" name="color[]" value="orange" type="checkbox">
+                        <label for="orange">Оранжевая</label>
+                        <input id="maroon" name="color[]" value="maroon" type="checkbox">
+                        <label for="maroon">Бордовая</label>
+                        <input id="blue" name="color[]" value="blue" type="checkbox">
+                        <label for="blue">Синяя</label>
+                        <input id="purple" name="color[]" value="purple" type="checkbox">
+                        <label for="purple">Фиолетовая</label>
 
-                        <button>Показать еще</button>
+                        <button type="button">Показать еще</button>
                     </fieldset>
-
                 </form>
-
             </aside>
         </div>
     </section>
