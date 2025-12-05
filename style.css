@@ -354,6 +354,28 @@ h1 span {
 .product_cards_filter {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    height: 1000px;
+}
+
+.product_cards_filter > * {
+    padding: 0 10px;
+}
+
+#search-input {
+    background-color: var(--white-gray);
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--brown);
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 50px;
+}
+
+#search-input::placeholder {
+    color: var(--gray4);
 }
 
 .form_filter_checkbox > fieldset {
