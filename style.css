@@ -339,6 +339,7 @@ h1 span {
     margin-left: 10%;
 }
 
+.form_filter_checkbox > fieldset > button,
 .product_cards_section > button {
     font-family: var(--literal-regular), sans-serif;
     color: var(--green);
@@ -347,6 +348,36 @@ h1 span {
     text-underline-offset: 6px;
     border: none;
     background: none;
+    padding-bottom: 10px;
+}
+
+.product_cards_filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_filter_checkbox > fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.form_filter_checkbox > fieldset > * {
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--brown);
+    font-size: 16px;
+}
+
+.form_filter_checkbox > fieldset > div {
+    padding: 5px 0;
+}
+
+.form_filter_checkbox > fieldset > legend {
+    font-family: var(--literal-bold), sans-serif;
+    color: var(--gray4);
+    font-size: 14px;
+    padding: 5px 0;
 }
 
 /*************************MAIN PAGE order_info_points***************************/
