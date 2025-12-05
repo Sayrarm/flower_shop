@@ -236,6 +236,11 @@ h1 span {
 
 /*************************MAIN PAGE product_cards*******************************/
 
+.product_cards {
+    display: flex;
+    flex-direction: column;
+}
+
 /*************************MAIN PAGE order_info_points***************************/
 
 .order_info {
@@ -479,13 +484,13 @@ footer {
     text-decoration: none;
 }
 
-form > * {
+.form_call_us > * {
     font-family: var(--literal-regular), sans-serif;
     font-size: 14px;
     color: white;
 }
 
-form {
+.form_call_us {
     display: grid;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
@@ -503,22 +508,26 @@ form {
     grid-area: phone;
 }
 
-fieldset {
+.fieldset_call_us {
     border: none;
     display: flex;
     flex-direction: column;
 }
 
-label {
+.phone_label,
+.name_label {
     padding-bottom: 2px;
 }
 
-textarea {
+.textarea {
     grid-area: textarea;
     height: 70px;
 }
 
-input, textarea {
+.name_input,
+#phone_input,
+#button_submit,
+.textarea {
     border: none;
     padding: 5px;
     border-radius: 2px;

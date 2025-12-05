@@ -83,7 +83,88 @@
 
     <section class="product_cards">
         <div class="product_cards_container">
+            <nav> Сортировать по:
+                <a href="">Новизне</a>
+                <a href="">Цена по возрастанию</a>
+                <a href="">Цена по убыванию</a>
+                <a href="">Популярности</a>
+            </nav>
+            <div></div>
+            <aside>
+                <form role="search" aria-label="Поиск по сайту">
+                    <label for="search-input" class="visually-hidden">Поиск товаров</label>
+                    <input type="search" id="search-input" name="q" placeholder="Найти букет..." aria-describedby="search-hint">
+                    <button class="search_submit" type="submit" aria-label="Искать">🔍</button>
 
+                    <fieldset>
+                        <legend>Стоимость:</legend>
+                        <input id="2500" name="price[]" value="2500" type="checkbox">
+                        <label for="2500">до 2500 руб.</label>
+                        <input id="2500-4000" name="price[]" value="2500" type="checkbox">
+                        <label for="2500-4000">2500 - 4000 руб.</label>
+                        <input id="4000-6000" name="price[]" value="2500" type="checkbox">
+                        <label for="4000-6000">4000 - 6000 руб.</label>
+                        <input id="6000" name="price[]" value="2500" type="checkbox">
+                        <label for="6000">от 6000 руб.</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Букет с:</legend>
+                        <input id="rose" name="flower[]" value="rose" type="checkbox">
+                        <label for="rose">Розами</label>
+                        <input id="tulips" name="flower[]" value="tulips" type="checkbox">
+                        <label for="tulips">Тюльпанами</label>
+                        <input id="hydrangeas" name="flower[]" value="hydrangeas" type="checkbox">
+                        <label for="hydrangeas">Гортензиями</label>
+                        <input id="sunflowers" name="flower[]" value="sunflowers" type="checkbox">
+                        <label for="sunflowers">Подсолнухами</label>
+                        <input id="orchids" name="flower[]" value="orchids" type="checkbox">
+                        <label for="orchids">Орхидеями</label>
+                        <input id="irises" name="flower[]" value="irises" type="checkbox">
+                        <label for="irises">Ирисами</label>
+                        <input id="lilies" name="flower[]" value="lilies" type="checkbox">
+                        <label for="lilies">Лилиями</label>
+                        <input id="gerberas" name="flower[]" value="gerberas" type="checkbox">
+                        <label for="gerberas">Герберами</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Цветы упакованы:</legend>
+                        <input id="bouquet" name="price[]" value="bouquet" type="checkbox">
+                        <label for="bouquet">Букетом</label>
+                        <input id="basket" name="price[]" value="basket" type="checkbox">
+                        <label for="basket">В корзине</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">В коробке</label>
+
+                        <button>Показать еще</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Цветовая гамма:</legend>
+                        <input id="bouquet" name="price[]" value="bouquet" type="checkbox">
+                        <label for="bouquet">Белая</label>
+                        <input id="basket" name="price[]" value="basket" type="checkbox">
+                        <label for="basket">Розовая</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Красная</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Желтая</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Оранжевая</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Бордовая</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Синяя</label>
+                        <input id="box" name="price[]" value="box" type="checkbox">
+                        <label for="box">Фиолетовая</label>
+
+                        <button>Показать еще</button>
+                    </fieldset>
+
+                </form>
+
+            </aside>
         </div>
     </section>
 
@@ -267,16 +348,17 @@
             </div>
             <div class="footer_center_nav_block_3">
                 <h3>Возникли вопросы? Свяжитесь с нами</h3>
-                <form action="#" method="POST">
-                    <fieldset>
-                        <label for="name_input">Ваше имя:</label>
-                        <input type="text" id="name_input" name="name" autocomplete="given-name" placeholder="Иван">
+                <form class="form_call_us" action="#" method="POST">
+                    <fieldset class="fieldset_call_us">
+                        <label class="name_label" for="name_input">Ваше имя:</label>
+                        <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
+                               placeholder="Иван">
                     </fieldset>
-                    <fieldset>
-                        <label for="phone_input">Ваш моб. номер:</label>
-                        <input type="text" id="phone_input" name="phone" autocomplete="tel" placeholder="+79999999999">
+                    <fieldset class="fieldset_call_us">
+                        <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
+                        <input id="phone_input" type="text" name="phone" autocomplete="tel" placeholder="+79999999999">
                     </fieldset>
-                    <textarea name="comment" id="textarea" cols="20" rows="10"
+                    <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
                               placeholder="Введите ваш комментарий..."></textarea>
                     <input id="button_submit" type="submit" placeholder="Отправить">
                 </form>
