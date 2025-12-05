@@ -236,9 +236,23 @@ h1 span {
 
 /*************************MAIN PAGE product_cards*******************************/
 
-.product_cards {
-    display: flex;
-    flex-direction: column;
+.product_cards_container {
+    display: grid;
+    grid-template-areas:
+    "sorter filter"
+    "cards filter";
+}
+
+.product_cards_sorter {
+    grid-area: sorter;
+}
+
+.product_cards_section {
+    grid-area: cards;
+}
+
+.product_cards_filter {
+    grid-area: filter;
 }
 
 /*************************MAIN PAGE order_info_points***************************/
