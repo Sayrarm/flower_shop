@@ -68,6 +68,7 @@ body {
     --gray: #828282;
     --white-gray: #F9F8FB;
     --yellow-gray: #F0F0F0;
+    --gray4: #BDBDBD;
     --shadow-brown: #A29BB4;
     --karton-regular: "Karton Regular", sans-serif;
     --literal-light: "Literal Light", sans-serif;
@@ -236,6 +237,11 @@ h1 span {
 
 /*************************MAIN PAGE product_cards*******************************/
 
+.product_cards {
+    background-color: var(--white-gray);
+    padding: 50px 0;
+}
+
 .product_cards_container {
     display: grid;
     grid-template-areas:
@@ -247,18 +253,101 @@ h1 span {
     grid-area: sorter;
 }
 
-.product_cards_section {
+.product_cards_items {
     grid-area: cards;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
 }
 
 .product_cards_filter {
     grid-area: filter;
 }
 
+.product_cards_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
+.product_cards_sorter {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--gray);
+}
+
+.product_cards_sorter > a {
+    color: var(--gray4);
+}
+
+.product_card_item {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.product_card_item > h3 {
+    font-family: var(--literal-bold), sans-serif;
+    font-size: 18px;
+    color: var(--brown);
+}
+
+.product_card_item > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product_card_item > div > p,
+.product_card_item > div > span,
+.product_card_item > h3 {
+    padding: 0 20px;
+}
+
+.product_card_item > div > p {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.product_card_item > div > span {
+    font-family: var(--literal-bold), sans-serif;
+    font-size: 16px;
+    color: var(--brown);
+}
+
+.product_card_item > button {
+    font-family: var(--literal-bold), sans-serif;
+    background-color: var(--green);
+    border: none;
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    margin-left: 10%;
+}
+
+.product_cards_section > button {
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--green);
+    font-size: 16px;
+    text-decoration: underline dotted;
+    text-underline-offset: 6px;
+    border: none;
+    background: none;
+}
 
 /*************************MAIN PAGE order_info_points***************************/
 
@@ -286,6 +375,7 @@ h1 span {
     font-family: var(--karton-regular), sans-serif;
     font-size: 24px;
     color: var(--brown);
+    margin-top: 50px;
 }
 
 .order_info_title_h2 span {
@@ -523,6 +613,7 @@ footer {
 #name_input {
     grid-area: name;
 }
+
 #phone_input {
     grid-area: phone;
 }
