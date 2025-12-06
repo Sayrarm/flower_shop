@@ -244,6 +244,9 @@ h1 span {
 
 .product_cards_container {
     display: grid;
+    gap: 20px;
+    grid-template-columns: 70% 20%;
+    justify-content: center;
     grid-template-areas:
     "sorter filter"
     "cards filter";
@@ -258,7 +261,7 @@ h1 span {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 20px;
 }
 
 .product_cards_filter {
