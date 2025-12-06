@@ -265,6 +265,32 @@ h1 span {
     grid-area: filter;
 }
 
+#search-input {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 15px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.form_filter_search {
+    position: relative;
+}
+
+.search_submit {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #666;
+}
+
 .product_cards_section {
     display: flex;
     flex-direction: column;
@@ -339,7 +365,24 @@ h1 span {
     margin-left: 10%;
 }
 
-.form_filter_checkbox > fieldset > button,
+.form_filter_checkbox > fieldset > div > input {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    accent-color: var(--green);
+}
+
+
+.form_filter_checkbox > fieldset > button {
+    font-family: var(--literal-regular), sans-serif;
+    color: var(--gray4);
+    font-size: 14px;
+    border: none;
+    background: none;
+    padding-bottom: 10px;
+}
+
+
 .product_cards_section > button {
     font-family: var(--literal-regular), sans-serif;
     color: var(--green);
@@ -356,7 +399,6 @@ h1 span {
     flex-direction: column;
     background-color: white;
     border-radius: 10px;
-    height: 1000px;
 }
 
 .product_cards_filter > * {
@@ -368,7 +410,7 @@ h1 span {
     font-family: var(--literal-regular), sans-serif;
     color: var(--brown);
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
     height: 50px;
@@ -376,6 +418,7 @@ h1 span {
 
 #search-input::placeholder {
     color: var(--gray4);
+    font-size: 16px;
 }
 
 .form_filter_checkbox > fieldset {
@@ -383,6 +426,7 @@ h1 span {
     flex-direction: column;
     border: none;
     border-bottom: 1px solid #E5E5E5;
+    margin: 10px 0;
 }
 
 .form_filter_checkbox > fieldset > * {
@@ -393,6 +437,8 @@ h1 span {
 
 .form_filter_checkbox > fieldset > div {
     padding: 5px 0;
+    display: flex;
+    align-items: center;
 }
 
 .form_filter_checkbox > fieldset > legend {
@@ -401,6 +447,8 @@ h1 span {
     font-size: 14px;
     padding: 5px 0;
 }
+
+.form_filter_checkbox
 
 /*************************MAIN PAGE order_info_points***************************/
 
