@@ -76,6 +76,10 @@ body {
     --literal-regular: "Literal Regular", sans-serif;
 }
 
+a, button {
+    cursor: pointer;
+}
+
 /*************************HEADER*******************************/
 
 header {
@@ -99,11 +103,21 @@ nav {
     gap: 145px;
 }
 
+.nav_contacts > a {
+    padding: 0 5px;
+}
+
 a {
     display: flex;
     align-items: center;
     white-space: nowrap;
     gap: 5px;
+    transition:  background-color 0.2s, color 0.2s;
+}
+
+.nav_contacts > a:hover {
+    height: 100%;
+    background-color: #6D5B6A;
 }
 
 .nav_maps {
@@ -162,6 +176,12 @@ nav > a {
     text-decoration: none;
 }
 
+.nav_info_container_1 > a:hover,
+.nav_info_container_2 > a:hover:hover,
+.nav_info_container_3 > a:hover:hover {
+    color: var(--green);
+}
+
 /*************************MAIN PAGE*******************************/
 
 
@@ -206,6 +226,10 @@ h1 span {
     border-radius: 10px;
     font-size: 18px;
     text-transform: uppercase;
+}
+
+.button_catalog:hover {
+    background-color: var(--brown);
 }
 
 /*************************MAIN PAGE advantages*******************************/
@@ -281,6 +305,20 @@ h1 span {
     position: relative;
 }
 
+.form_filter_search > input:focus {
+    outline: none;
+}
+
+/* Убираем крестик в браузерах на движке Webkit (Chrome, Safari, Edge) */
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* Для Internet Explorer */
+input[type="search"]::-ms-clear {
+    display: none;
+}
+
 .search_submit {
     position: absolute;
     right: 10%;
@@ -314,6 +352,10 @@ h1 span {
 
 .product_cards_sorter > a {
     color: var(--gray4);
+}
+
+.product_cards_sorter > a:hover {
+    color: var(--gray);
 }
 
 .product_card_item {
@@ -366,6 +408,11 @@ h1 span {
     color: white;
     border-radius: 10px;
     margin-left: 10%;
+    transition:  background-color 0.2s;
+}
+
+.product_card_item > button:hover {
+    background-color: var(--brown);
 }
 
 .form_filter_checkbox > fieldset > div > input {
@@ -383,6 +430,11 @@ h1 span {
     border: none;
     background: none;
     padding-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.form_filter_checkbox > fieldset > button:hover {
+    color: var(--gray);
 }
 
 
@@ -395,6 +447,11 @@ h1 span {
     border: none;
     background: none;
     padding-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.product_cards_section > button:hover {
+    color: var(--brown);
 }
 
 .product_cards_filter {
@@ -515,6 +572,7 @@ h1 span {
 
     position: relative;
     transition: border 0.2s, color 0.2s;
+    cursor: default;
 }
 
 /* Создаем декоративный элемент вокруг кнопки */
@@ -586,6 +644,10 @@ h1 span {
     font-size: 16px;
     text-decoration: underline dotted;
     text-underline-offset: 6px;
+}
+
+.reviews_a:hover {
+    color: var(--brown);
 }
 
 .reviews_comment_card {
@@ -666,6 +728,10 @@ footer {
     font-size: 16px;
 }
 
+.upper_nav_container > a:hover {
+    color: var(--green);
+}
+
 .footer_center_nav {
     margin-top: 30px;
     padding-bottom: 30px;
@@ -695,6 +761,10 @@ footer {
 
 .footer_center_nav_block_2 > a {
     text-decoration: none;
+}
+
+.footer_center_nav_block_2 > a:hover {
+    color: var(--green);
 }
 
 .form_call_us > * {
@@ -745,6 +815,12 @@ footer {
     border: none;
     padding: 5px;
     border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#button_submit:hover {
+    background-color: var(--brown);
 }
 
 .footer_center_nav_block_1,
@@ -785,6 +861,10 @@ footer {
 .footer_bottom_nav > div > a {
     text-decoration: none;
     color: var(--shadow-brown);
+}
+
+.footer_bottom_nav > div > a:hover {
+    color: var(--green);
 }
 
 .footer_bottom_nav > div {
