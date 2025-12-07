@@ -17,9 +17,73 @@ function setupToggle(btnId, selector) {
     });
 }
 
-// Используй
 setupToggle('btnImgVisible', '.img_review.hidden');
 setupToggle('btnCommentsVisible', '.reviews_comment_card.hidden');
+setupToggle('showMoreBtn', '.product_card_item.hidden');
 
+/*сортировка*/
 
+const cardsContainer = document.querySelector('.product_cards_items');
+const cards = Array.from(document.querySelectorAll('.product_card_item'));
+const links = document.querySelectorAll('.product_cards_sorter a');
 
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const sortType = link.textContent;
+        const sortedCards = [...cards];
+
+        if (sortType === 'Цена по возрастанию') {
+            sortedCards.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('span').textContent);
+                const priceB = parseInt(b.querySelector('span').textContent);
+                return priceA - priceB;
+            });
+        }
+        else if (sortType === 'Цена по убыванию') {
+            sortedCards.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('span').textContent);
+                const priceB = parseInt(b.querySelector('span').textContent);
+                return priceB - priceA;
+            });
+        }
+
+        // Очистить и добавить отсортированные
+        cardsContainer.innerHTML = '';
+        sortedCards.forEach(card => cardsContainer.appendChild(card));
+    });
+});
+
+/*фильтры*/
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        const selectedPrices = Array.from(
+            document.querySelectorAll('input[name="price[]"]:checked')
+        ).map(cb => cb.value);
+
+        // Если выбраны цены
+        if (selectedPrices.length > 0) {
+            cards.forEach(card => {
+                const priceText = card.querySelector('span').textContent;
+                const price = parseInt(priceText);
+                let matches = false;
+
+                selectedPrices.forEach(priceRange => {
+                    if (priceRange === '0-2500' && price <= 2500) matches = true;
+                    if (priceRange === '2500-4000' && price > 2500 && price <= 4000) matches = true;
+                    if (priceRange === '4000-6000' && price > 4000 && price <= 6000) matches = true;
+                    if (priceRange === '6000+' && price > 6000) matches = true;
+                });
+
+                card.style.display = matches ? '' : 'none';
+            });
+        } else {
+            // Если фильтры сброшены - показать все
+            cards.forEach(card => card.style.display = '');
+        }
+    });
+});

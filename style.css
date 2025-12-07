@@ -368,6 +368,10 @@ input[type="search"]::-ms-clear {
     padding-bottom: 20px;
 }
 
+.product_card_item.hidden {
+    display: none;
+}
+
 .product_card_item > h3 {
     font-family: var(--literal-bold), sans-serif;
     font-size: 18px;
