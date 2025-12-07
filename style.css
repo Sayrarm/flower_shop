@@ -50,6 +50,7 @@ body {
 }
 
 .nav_info,
+.nav_contacts_container,
 .advantages,
 .product_cards_container,
 .order_info,
@@ -98,12 +99,17 @@ nav {
     background-color: var(--brown);
     width: 100%;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 145px;
+
 }
 
-.nav_contacts > a {
+.nav_contacts_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_contacts_container > a {
     padding: 0 5px;
 }
 
@@ -115,7 +121,7 @@ a {
     transition:  background-color 0.2s, color 0.2s;
 }
 
-.nav_contacts > a:hover {
+.nav_contacts_container > a:hover {
     height: 100%;
     background-color: #6D5B6A;
 }
@@ -129,11 +135,11 @@ a {
     color: var(--green);
 }
 
-nav > a {
+.nav_contacts_container > a {
     text-decoration: none;
 }
 
-.nav_contacts > a {
+.nav_contacts_container > a {
     color: white;
 }
 
@@ -190,8 +196,10 @@ nav > a {
 .main_page {
     height: 400px;
     background-image: url('images/background.svg');
+    object-fit: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
 
     display: flex;
     justify-content: center;
