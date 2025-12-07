@@ -626,6 +626,14 @@ input[type="search"]::-ms-clear {
     gap: 21px;
 }
 
+.img_review.hidden {
+    display: none;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 168px;
+    width: 168px;
+}
+
 .reviews_title_h2 {
     font-family: var(--karton-regular), sans-serif;
     font-size: 26px;
@@ -650,6 +658,10 @@ input[type="search"]::-ms-clear {
 
 .reviews_comment_card {
     margin-bottom: 10px;
+}
+
+.reviews_comment_card.hidden {
+    display: none;
 }
 
 .reviews_comment_card_block_1 {
