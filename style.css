@@ -420,6 +420,14 @@ input[type="search"]::-ms-clear {
     background-color: var(--brown);
 }
 
+.filter_checkbox1.hidden {
+    display: none;
+}
+
+.filter_checkbox2.hidden {
+    display: none;
+}
+
 .form_filter_checkbox > fieldset > div > input {
     width: 15px;
     height: 15px;

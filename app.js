@@ -20,6 +20,8 @@ function setupToggle(btnId, selector) {
 setupToggle('btnImgVisible', '.img_review.hidden');
 setupToggle('btnCommentsVisible', '.reviews_comment_card.hidden');
 setupToggle('showMoreBtn', '.product_card_item.hidden');
+setupToggle('checkboxBtn1', '.filter_checkbox1.hidden');
+setupToggle('checkboxBtn2', '.filter_checkbox2.hidden');
 
 /*сортировка*/
 
@@ -87,3 +89,4 @@ checkboxes.forEach(checkbox => {
         }
     });
 });
+
