@@ -270,6 +270,7 @@ h1 span {
     display: grid;
     gap: 20px;
     grid-template-columns: 70% 20%;
+    grid-template-rows: auto 1fr;
     justify-content: center;
     grid-template-areas:
     "sorter filter"
@@ -278,6 +279,13 @@ h1 span {
 
 .product_cards_sorter {
     grid-area: sorter;
+}
+
+.product_cards_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .product_cards_items {
@@ -330,13 +338,6 @@ input[type="search"]::-ms-clear {
     height: 30px;
     cursor: pointer;
     color: #666;
-}
-
-.product_cards_section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
 }
 
 .product_cards_sorter {
