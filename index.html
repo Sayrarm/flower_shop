@@ -369,14 +369,14 @@
             <div class="reviews_photos">
                 <div class="reviews_photos_title">
                     <h2 class="reviews_title_h2"><span>ФОТО</span>ХВАСТЫ</h2>
-                    <a class="reviews_a" href="#morephoto">Больше фото</a>
+                    <button id="btnImgVisible" class="reviews_btn">Больше фото</button>
                 </div>
 
                 <div class="reviews_photos_img">
-                    <img class="img_review visible" src="images/reviews/Rectangle 11.svg" alt="img-flower">
-                    <img class="img_review visible" src="images/reviews/Rectangle 12.svg" alt="img-flower">
-                    <img class="img_review visible" src="images/reviews/Rectangle 13.svg" alt="img-flower">
-                    <img class="img_review visible" src="images/reviews/Rectangle 14.svg" alt="img-flower">
+                    <img class="img_review" src="images/reviews/Rectangle 11.svg" alt="img-flower">
+                    <img class="img_review" src="images/reviews/Rectangle 12.svg" alt="img-flower">
+                    <img class="img_review" src="images/reviews/Rectangle 13.svg" alt="img-flower">
+                    <img class="img_review" src="images/reviews/Rectangle 14.svg" alt="img-flower">
 
                     <img class="img_review hidden" src="images/reviews/Rectangle 15.svg" alt="img-flower">
                     <img class="img_review hidden" src="images/reviews/Rectangle 16.svg" alt="img-flower">
@@ -395,10 +395,10 @@
             <div class="reviews_comments">
                 <div class="reviews_photos_title">
                     <h2 class="reviews_title_h2">ОТЗЫВЫ</h2>
-                    <a class="reviews_a" href="#morecomments">Смотреть все</a>
+                    <button id="btnCommentsVisible" class="reviews_btn">Смотреть все</button>
                 </div>
 
-                <article class="reviews_comment_card visible">
+                <article class="reviews_comment_card">
                     <div class="reviews_comment_card_block_1">
                         <div class="name_reviewer">
                             Анатолий Петров <br>
@@ -413,7 +413,7 @@
                     </div>
                 </article>
 
-                <article class="reviews_comment_card visible">
+                <article class="reviews_comment_card">
                     <div class="reviews_comment_card_block_1">
                         <div class="name_reviewer">
                             Мария Семенова <br>
@@ -428,7 +428,7 @@
                     </div>
                 </article>
 
-                <article class="reviews_comment_card visible">
+                <article class="reviews_comment_card">
                     <div class="reviews_comment_card_block_1">
                         <div class="name_reviewer">
                             Иван Козлов <br>
@@ -606,6 +606,8 @@
 
 
 </footer>
+
+<script src="app.js"></script>
 
 </body>
 </html>

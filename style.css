@@ -626,12 +626,15 @@ input[type="search"]::-ms-clear {
     gap: 21px;
 }
 
-.img_review.hidden {
-    display: none;
+.img_review {
     border-radius: 10px;
     object-fit: cover;
     height: 168px;
     width: 168px;
+}
+
+.img_review.hidden {
+    display: none;
 }
 
 .reviews_title_h2 {
@@ -644,15 +647,18 @@ input[type="search"]::-ms-clear {
     color: var(--green);
 }
 
-.reviews_a {
+.reviews_btn {
     font-family: var(--literal-regular), sans-serif;
     color: var(--green);
     font-size: 16px;
     text-decoration: underline dotted;
     text-underline-offset: 6px;
+    background: none;
+    border: none;
+    transition: color 0.2s;
 }
 
-.reviews_a:hover {
+.reviews_btn:hover {
     color: var(--brown);
 }
 
