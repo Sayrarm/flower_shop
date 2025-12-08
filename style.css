@@ -974,7 +974,7 @@ footer {
     .reviews,
     .disclaimer,
     footer {
-        padding: 5px;
+        padding: 10px;
     }
 }
 
@@ -989,15 +989,25 @@ footer {
     .center_nav_container {
         display: grid;
         gap: 10px;
-        grid-template-columns: 75% 20%;
-        grid-template-rows: auto 1fr;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 1fr 1fr;
         justify-content: center;
         grid-template-areas:
-        "sorter filter"
-        "cards filter";
+        "block_1 block_2"
+        "block_3 block_3";
     }
 
+    .footer_center_nav_block_1 {
+        grid-area: block_1;
+    }
 
+    .footer_center_nav_block_2 {
+        grid-area: block_2;
+    }
+
+    .footer_center_nav_block_3 {
+        grid-area: block_3;
+    }
 
 }
 
@@ -1005,6 +1015,11 @@ footer {
     .order_info_points {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product_cards_sorter,
+    .product_cards_filter {
+        display: none;
     }
 }
 
@@ -1015,6 +1030,12 @@ footer {
 
     .h1 {
         font-size: 50px;
+    }
+
+    .center_nav_container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
