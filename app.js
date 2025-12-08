@@ -90,3 +90,41 @@ checkboxes.forEach(checkbox => {
     });
 });
 
+/*смена валюты*/
+
+// currency-converter.js
+document.addEventListener('DOMContentLoaded', function() {
+    const EXCHANGE_RATE = 80;
+    const toggleBtn = document.getElementById('currencyToggle');
+    const priceSpans = document.querySelectorAll('.product_card_item div span');
+
+    let isRub = true;
+
+    // Сохраняем оригинальные цены
+    priceSpans.forEach(span => {
+        const priceText = span.textContent.trim();
+        const priceNum = parseFloat(priceText);
+        span.dataset.originalPrice = priceNum;
+    });
+
+    toggleBtn.addEventListener('click', function() {
+        if (isRub) {
+            // Конвертируем в доллары
+            priceSpans.forEach(span => {
+                const originalPrice = span.dataset.originalPrice;
+                const priceUSD = (originalPrice / EXCHANGE_RATE).toFixed(2);
+                span.textContent = `${priceUSD} $`;
+            });
+            toggleBtn.textContent = 'ДОЛ.';
+        } else {
+            // Возвращаем рубли
+            priceSpans.forEach(span => {
+                const originalPrice = span.dataset.originalPrice;
+                span.textContent = `${originalPrice} руб.`;
+            });
+            toggleBtn.textContent = 'РУБ.';
+        }
+
+        isRub = !isRub;
+    });
+});
