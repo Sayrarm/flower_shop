@@ -202,6 +202,79 @@ a {
     display: none;
 }
 
+.burger_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.burger:hover .burger_link {
+    background-color: var(--green);
+}
+
+/**************************анимация для бургер-кнопки******************************/
+
+/* Используем CSS переменные для легкой настройки */
+.burger {
+    --burger-width: 30px;
+    --burger-height: 20px;
+    --burger-thickness: 3px;
+
+    position: relative;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: var(--burger-thickness);
+    width: 100%;
+    background: var(--brown);
+    border-radius: calc(var(--burger-thickness) / 2);
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: calc(var(--burger-height) / 2 - var(--burger-thickness) / 2);
+    left: calc(var(--burger-thickness) * 1.5);
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: calc(var(--burger-height) / 2 - var(--burger-thickness) / 2);
+    left: calc(var(--burger-thickness) * 1.5);
+}
+
 /*************************MAIN PAGE*******************************/
 
 
