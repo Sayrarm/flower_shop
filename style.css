@@ -947,4 +947,37 @@ footer {
     .nav_info_container_5 {
         display: flex;
     }
+
+    .advantages {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 530px) {
+    .main_page > h1 {
+        font-size: 25px;
+    }
+
+    .h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 410px) {
+    .main_page > h1 {
+        font-size: 20px;
+    }
+
+    .h1 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .advantages {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
