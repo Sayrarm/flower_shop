@@ -178,7 +178,8 @@ a {
 .nav_info_container_2 > a,
 .nav_info_container_3 > a,
 .change_currency_btn,
-.burger_button {
+.burger_button,
+.modal_nav > a {
     color: var(--brown);
     text-transform: uppercase;
     font-family: var(--literal-regular), sans-serif;
@@ -193,12 +194,13 @@ a {
 .nav_info_container_2 > a:hover,
 .nav_info_container_3 > a:hover,
 .change_currency_btn:hover,
-.burger_button:hover {
+.burger_button:hover,
+.modal_nav > a:hover {
     color: var(--green);
 }
 
-.nav_info_container_4,
-.nav_info_container_5 {
+.nav_info_container_4
+ {
     display: none;
 }
 
@@ -275,8 +277,59 @@ a {
     left: calc(var(--burger-thickness) * 1.5);
 }
 
-/*************************MAIN PAGE*******************************/
+/*************************анимация для модального окна****************/
 
+.modal_nav {
+    position: absolute;
+    top: 130px;
+    background-color: white;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+.border {
+    border: 1px solid var(--brown);
+    width: 100%;
+    margin: 0;
+}
+
+.modal_nav.active {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.modal_nav.closing {
+    animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
 
 /*************************MAIN PAGE H1*******************************/
 
