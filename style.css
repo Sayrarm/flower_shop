@@ -299,6 +299,10 @@ h1 span {
     "cards filter";
 }
 
+.sorter_and_filter_for_mobile {
+    display: none;
+}
+
 .product_cards_sorter {
     grid-area: sorter;
 }
@@ -362,10 +366,22 @@ input[type="search"]::-ms-clear {
     color: #666;
 }
 
+.sorter_mobile_block {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .product_cards_sorter {
-    height: 50px;
     display: flex;
     justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+.product_cards_sorter,
+.sorter_and_filter_for_mobile {
+    font-size: 16px;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -373,12 +389,22 @@ input[type="search"]::-ms-clear {
     color: var(--gray);
 }
 
-.product_cards_sorter > a {
-    color: var(--gray4);
-    text-decoration: none;
+.product_cards_sorter_mobile {
+    gap: 5px;
 }
 
-.product_cards_sorter > a:hover {
+.product_cards_sorter > button,
+.sorter_mobile_button {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
+    color: var(--gray4);
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+.product_cards_sorter > button:hover,
+.sorter_mobile_button:hover {
     color: var(--gray);
 }
 
@@ -962,7 +988,7 @@ footer {
     }
 
     .product_cards_sorter,
-    .product_cards_sorter > a {
+    .product_cards_sorter > button {
         font-size: 14px;
     }
 
@@ -984,6 +1010,10 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         gap: 10px;
+    }
+
+    .reviews_comments {
+        width: 90%;
     }
 
     .center_nav_container {
@@ -1021,6 +1051,20 @@ footer {
     .product_cards_filter {
         display: none;
     }
+
+    .product_cards_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sorter_and_filter_for_mobile {
+        display: flex;
+        height: 100px;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 530px) {
@@ -1036,6 +1080,11 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .product_cards_items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

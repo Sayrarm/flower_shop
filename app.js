@@ -27,7 +27,7 @@ setupToggle('checkboxBtn2', '.filter_checkbox2.hidden');
 
 const cardsContainer = document.querySelector('.product_cards_items');
 const cards = Array.from(document.querySelectorAll('.product_card_item'));
-const links = document.querySelectorAll('.product_cards_sorter a');
+const links = document.querySelectorAll('.product_cards_sorter button');
 
 links.forEach(link => {
     link.addEventListener('click', (e) => {
