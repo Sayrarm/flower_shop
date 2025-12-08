@@ -300,10 +300,6 @@ h1 span {
 }
 
 .sorter_and_filter_for_mobile {
-    display: none;
-}
-
-.product_cards_sorter {
     grid-area: sorter;
 }
 
@@ -366,10 +362,15 @@ input[type="search"]::-ms-clear {
     color: #666;
 }
 
-.sorter_mobile_block {
-    display: flex;
-    flex-direction: column;
+.product_cards_sorter_mobile {
+    width: 20%;
+    padding-left: 10px;
+}
 
+.sorter_mobile_block {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .product_cards_sorter {
@@ -377,10 +378,10 @@ input[type="search"]::-ms-clear {
     justify-content: space-evenly;
     height: 50px;
     align-items: center;
+    width: 100%;
 }
 
-.product_cards_sorter,
-.sorter_and_filter_for_mobile {
+.product_cards_sorter {
     font-size: 16px;
     background-color: white;
     border-radius: 10px;
@@ -389,9 +390,7 @@ input[type="search"]::-ms-clear {
     color: var(--gray);
 }
 
-.product_cards_sorter_mobile {
-    gap: 5px;
-}
+
 
 .product_cards_sorter > button,
 .sorter_mobile_button {
@@ -987,8 +986,8 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .product_cards_sorter,
-    .product_cards_sorter > button {
+    .product_cards_sorter_mobile,
+    .sorter_mobile_button {
         font-size: 14px;
     }
 
@@ -1047,24 +1046,31 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .product_cards_sorter,
-    .product_cards_filter {
-        display: none;
-    }
-
     .product_cards_container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .sorter_and_filter_for_mobile {
+    .product_cards_sorter_mobile {
+        width: auto;
+    }
+
+    .sorter_mobile_block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+    }
+
+    .product_cards_sorter.sorter_and_filter_for_mobile {
         display: flex;
         height: 100px;
-        width: 90%;
+        width: 95%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
+
 }
 
 @media (max-width: 530px) {

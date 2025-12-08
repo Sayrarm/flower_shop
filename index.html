@@ -94,7 +94,7 @@
     <section class="product_cards" id="product_cards">
         <div class="product_cards_container">
 
-            <nav class="sorter_and_filter_for_mobile">
+            <nav class="product_cards_sorter sorter_and_filter_for_mobile">
                 <div class="product_cards_sorter_mobile"> Сортировать по:</div>
                 <div class="sorter_mobile_block">
                     <button class="sorter_mobile_button">Новизне</button>
@@ -102,262 +102,7 @@
                     <button class="sorter_mobile_button">Цена по убыванию</button>
                     <button class="sorter_mobile_button">Популярности</button>
                 </div>
-
-                <aside class="product_cards_filter">
-                    <form class="form_filter_search" action="/search" method="GET" role="search"
-                          aria-label="Поиск по сайту">
-                        <input type="search" id="search-input-mob" name="q" placeholder="Поиск"
-                               aria-describedby="search-hint">
-                        <button class="search_submit" type="submit" aria-label="Искать">
-                            <img src="images/product-cards/search.svg" alt="лупа">
-                        </button>
-                    </form>
-
-                    <form class="form_filter_checkbox">
-                        <fieldset>
-                            <legend>Стоимость:</legend>
-                            <div>
-                                <input id="price-2500-mob" name="price[]" value="0-2500" type="checkbox">
-                                <label for="price-2500-mob">до 2500 руб.</label>
-                            </div>
-                            <div>
-                                <input id="price-2500-4000-mob" name="price[]" value="2500-4000" type="checkbox">
-                                <label for="price-2500-4000-mob">2500 - 4000 руб.</label>
-                            </div>
-                            <div>
-                                <input id="price-4000-6000-mob" name="price[]" value="4000-6000" type="checkbox">
-                                <label for="price-4000-6000-mob">4000 - 6000 руб.</label>
-                            </div>
-                            <div>
-                                <input id="price-6000-mob" name="price[]" value="6000+" type="checkbox">
-                                <label for="price-6000-mob">от 6000 руб.</label>
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Букет с:</legend>
-                            <div class="filter_checkbox1">
-                                <input id="rose-mob" name="flower[]" value="rose" type="checkbox">
-                                <label for="rose-mob">Розами</label>
-                            </div>
-                            <div class="filter_checkbox1">
-                                <input id="tulips-mob" name="flower[]" value="tulips" type="checkbox">
-                                <label for="tulips-mob">Тюльпанами</label>
-                            </div>
-                            <div class="filter_checkbox1">
-                                <input id="hydrangeas-mob" name="flower[]" value="hydrangeas" type="checkbox">
-                                <label for="hydrangeas-mob">Гортензиями</label>
-                            </div>
-                            <div class="filter_checkbox1 hidden">
-                                <input id="sunflowers-mob" name="flower[]" value="sunflowers" type="checkbox">
-                                <label for="sunflowers-mob">Подсолнухами</label>
-                            </div>
-                            <div class="filter_checkbox1 hidden">
-                                <input id="orchids-mob" name="flower[]" value="orchids" type="checkbox">
-                                <label for="orchids-mob">Орхидеями</label>
-                            </div>
-                            <div class="filter_checkbox1 hidden">
-                                <input id="irises-mob" name="flower[]" value="irises" type="checkbox">
-                                <label for="irises-mob">Ирисами</label>
-                            </div>
-                            <div class="filter_checkbox1 hidden">
-                                <input id="lilies-mob" name="flower[]" value="lilies" type="checkbox">
-                                <label for="lilies-mob">Лилиями</label>
-                            </div>
-                            <div class="filter_checkbox1 hidden">
-                                <input id="gerberas-mob" name="flower[]" value="gerberas" type="checkbox">
-                                <label for="gerberas-mob">Герберами</label>
-                            </div>
-
-                            <button id="checkboxBtn1-mob" type="button">Показать еще</button>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Цветы упакованы:</legend>
-                            <div class="filter_checkbox">
-                                <input id="bouquet-mob" name="packing[]" value="bouquet" type="checkbox">
-                                <label for="bouquet-mob">Букетом</label>
-                            </div>
-                            <div class="filter_checkbox">
-                                <input id="basket-mob" name="packing[]" value="basket" type="checkbox">
-                                <label for="basket-mob">В корзине</label>
-                            </div>
-                            <div class="filter_checkbox">
-                                <input id="box-mob" name="packing[]" value="box" type="checkbox">
-                                <label for="box-mob">В коробке</label>
-                            </div>
-
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Цветовая гамма:</legend>
-                            <div class="filter_checkbox2">
-                                <input id="white-mob" name="color[]" value="white" type="checkbox">
-                                <label for="white-mob">Белая</label>
-                            </div>
-                            <div class="filter_checkbox2">
-                                <input id="pink-mob" name="color[]" value="pink" type="checkbox">
-                                <label for="pink-mob">Розовая</label>
-                            </div>
-                            <div class="filter_checkbox2">
-                                <input id="red-mob" name="color[]" value="red" type="checkbox">
-                                <label for="red-mob">Красная</label>
-                            </div>
-                            <div class="filter_checkbox2 hidden">
-                                <input id="yellow-mob" name="color[]" value="yellow" type="checkbox">
-                                <label for="yellow-mob">Желтая</label>
-                            </div>
-                            <div class="filter_checkbox2 hidden">
-                                <input id="orange-mob" name="color[]" value="orange" type="checkbox">
-                                <label for="orange-mob">Оранжевая</label>
-                            </div>
-                            <div class="filter_checkbox2 hidden">
-                                <input id="maroon-mob" name="color[]" value="maroon" type="checkbox">
-                                <label for="maroon-mob">Бордовая</label>
-                            </div>
-                            <div class="filter_checkbox2 hidden">
-                                <input id="blue-mob" name="color[]" value="blue" type="checkbox">
-                                <label for="blue-mob">Синяя</label>
-                            </div>
-                            <div class="filter_checkbox2 hidden">
-                                <input id="purple-mob" name="color[]" value="purple" type="checkbox">
-                                <label for="purple-mob">Фиолетовая</label>
-                            </div>
-
-                            <button id="checkboxBtn2-mob" type="button">Показать еще</button>
-                        </fieldset>
-                    </form>
-                </aside>
             </nav>
-
-            <nav class="product_cards_sorter"> Сортировать по:
-                <button>Новизне</button>
-                <button>Цена по возрастанию</button>
-                <button>Цена по убыванию</button>
-                <button>Популярности</button>
-            </nav>
-
-            <div class="product_cards_section">
-                <div class="product_cards_items">
-                    <!-- Карточка 1 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/1.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Букет из <br> разноцветных роз</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 2300 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-                    <!-- Карточка 2 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/2.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Букет невесты <br> с пионами</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 4100 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 3 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/3.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Композиция <br> из полевых цветов</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 1850 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 4 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/4.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Букет с тюльпанами <br> и гипсофилой</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 2700 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 5 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/5.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Экзотический букет <br> с орхидеями</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 5200 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 6 -->
-                    <article class="product_card_item">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/6.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Классический букет <br> из красных роз</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 3200 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 7 -->
-                    <article class="product_card_item hidden">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/7.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Весенний букет <br> с ирисами</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 2450 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 8 -->
-                    <article class="product_card_item hidden">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/8.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Букет с герберами <br> и зеленью</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 2900 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-
-                    <!-- Карточка 9 -->
-                    <article class="product_card_item hidden">
-                        <div class="product_card_item_img_and_text">
-                            <img src="images/product-cards/9.svg" alt="flower img">
-                            <h3 class="product_card_item_h3">Букет для мамы <br> с хризантемами</h3>
-                            <div class="product_card_item_text">
-                                <p class="product_card_item_p">Стоимость:</p>
-                                <span class="product_card_item_span"> 2150 руб.</span>
-                            </div>
-                        </div>
-                        <button class="product_card_item_button">В корзину</button>
-                    </article>
-                </div>
-
-                <button id="showMoreBtn">Показать еще</button>
-            </div>
 
             <aside class="product_cards_filter">
                 <form class="form_filter_search" action="/search" method="GET" role="search"
@@ -484,6 +229,130 @@
                     </fieldset>
                 </form>
             </aside>
+
+            <div class="product_cards_section">
+                <div class="product_cards_items">
+                    <!-- Карточка 1 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/1.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Букет из <br> разноцветных роз</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 2300 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+                    <!-- Карточка 2 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/2.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Букет невесты <br> с пионами</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 4100 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/3.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Композиция <br> из полевых цветов</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 1850 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/4.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Букет с тюльпанами <br> и гипсофилой</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 2700 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 5 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/5.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Экзотический букет <br> с орхидеями</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 5200 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 6 -->
+                    <article class="product_card_item">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/6.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Классический букет <br> из красных роз</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 3200 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 7 -->
+                    <article class="product_card_item hidden">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/7.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Весенний букет <br> с ирисами</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 2450 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 8 -->
+                    <article class="product_card_item hidden">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/8.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Букет с герберами <br> и зеленью</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 2900 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+
+                    <!-- Карточка 9 -->
+                    <article class="product_card_item hidden">
+                        <div class="product_card_item_img_and_text">
+                            <img src="images/product-cards/9.svg" alt="flower img">
+                            <h3 class="product_card_item_h3">Букет для мамы <br> с хризантемами</h3>
+                            <div class="product_card_item_text">
+                                <p class="product_card_item_p">Стоимость:</p>
+                                <span class="product_card_item_span"> 2150 руб.</span>
+                            </div>
+                        </div>
+                        <button class="product_card_item_button">В корзину</button>
+                    </article>
+                </div>
+
+                <button id="showMoreBtn">Показать еще</button>
+            </div>
+
+
         </div>
     </section>
 
