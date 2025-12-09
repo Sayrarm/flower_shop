@@ -267,7 +267,7 @@ a {
 }
 
 .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
+    width: 0;
     opacity: 0;
 }
 
@@ -1027,6 +1027,8 @@ footer {
     border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.2s;
+    color: var(--gray);
+    font-family: var(--literal-regular), sans-serif;
 }
 
 #button_submit:hover {
@@ -1277,3 +1279,4 @@ footer {
         gap: 5px;
     }
 }
+
