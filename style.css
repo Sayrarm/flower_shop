@@ -57,7 +57,8 @@ body {
 .reviews_container,
 .disclaimer_container,
 .upper_nav_container,
-.center_nav_container {
+.center_nav_container,
+.contacts_page_nav {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -1084,6 +1085,28 @@ footer {
     justify-content: center;
     gap: 5px;
 }
+
+/******************************CONTACTS PAGE******************************************/
+
+.contacts_page_nav {
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 14px;
+    color: var(--gray);
+    gap: 5px;
+}
+
+.contacts_page_nav > a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.contacts_page_nav > a:hover {
+    color: var(--brown);
+}
+
+
 
 /******************************MOBILE VERSION******************************************/
 
