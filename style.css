@@ -1149,17 +1149,78 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .contacts_page_call_us >  h3 {
     font-family: var(--literal-bold), sans-serif;
     font-size: 18px;
     color: var(--brown);
+    margin: 20px 0;
 }
 
 .contacts_page_fieldset_call_us {
     border: none;
     background: none;
+}
+
+#contacts_page_name_input,
+#contacts_page_email_input,
+#contacts_page_phone_input,
+#contacts_page_textarea {
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 16px;
+    color: var(--gray4);
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    border: 1px solid var(--gray4);
+    height: 40px;
+    padding-left: 10px;
+}
+
+#contacts_page_textarea {
+    padding-top: 8px;
+}
+
+#contacts_page_textarea {
+    height: 128px;
+}
+
+.contacts_page_form_call_us {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 25% 70%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-template-areas:
+    "name textarea"
+    "email textarea"
+    "phone textarea"
+    ". submit";
+}
+
+#contacts_page_name_input {
+    grid-area: name;
+}
+
+#contacts_page_email_input {
+    grid-area: email;
+}
+#contacts_page_phone_input {
+    grid-area: phone;
+}
+#contacts_page_textarea {
+    grid-area: textarea;
+}
+#contacts_page_button_submit {
+    grid-area: submit;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    color: white;
 }
 
 /******************************MOBILE VERSION******************************************/
