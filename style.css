@@ -85,18 +85,10 @@ a, button {
 
 /*************************HEADER*******************************/
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 .nav_contacts {
     background-color: var(--brown);
     width: 100%;
     height: 40px;
-
 }
 
 .nav_contacts_container {
@@ -158,19 +150,41 @@ a {
 
 .nav_info {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
     align-items: center;
+    grid-template-columns: 40% 20% 30% 10%;
+    grid-template-areas:
+    "container_1 container_2 container_3 container_5";
+}
+
+.nav_info_container_1 {
+    grid-area: container_1;
+}
+.nav_info_container_2 {
+    grid-area: container_2;
+}
+.nav_info_container_3 {
+    grid-area: container_3;
+}
+.nav_info_container_5 {
+    grid-area: container_5;
 }
 
 .nav_info_container_1,
 .nav_info_container_3 {
-    width: 40%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-
+.nav_info_container_5 {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
 
 .nav_info_container_1 > a,
 .nav_info_container_2 > a,
@@ -1285,6 +1299,12 @@ footer {
     .nav_info_container_4,
     .nav_info_container_5 {
         display: flex;
+    }
+
+    .nav_info_container_4 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .advantages {
