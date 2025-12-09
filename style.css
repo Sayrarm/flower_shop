@@ -1093,6 +1093,34 @@ footer {
     background-color: var(--white-gray);
 }
 
+.contacts_page_grid {
+    display: grid;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    grid-template-columns: 20% 80%;
+    gap: 10px;
+    grid-template-areas:
+    "info map"
+    "call_us call_us";
+}
+
+.contacts_page_info {
+    grid-area: info;
+}
+
+.contacts_page_map {
+    grid-area: map;
+}
+
+.contacts_page_map > img {
+    width: 100%;
+}
+
+.contacts_page_call_us {
+    grid-area: call_us;
+}
+
 .contacts_page_nav_container {
     display: flex;
     justify-content: flex-start;
@@ -1111,6 +1139,7 @@ footer {
     font-family: var(--karton-regular), sans-serif;
     font-size: 24px;
     color: var(--brown);
+    margin-bottom: 20px;
 }
 
 .contacts_page_nav_container > a:hover {
@@ -1192,7 +1221,7 @@ footer {
     height: 220px;
     display: grid;
     justify-content: center;
-    grid-template-columns: 25% 70%;
+    grid-template-columns: 30% 50%;
     grid-template-rows: 20% 20% 20% 20%;
     grid-template-areas:
     "name textarea"
@@ -1203,13 +1232,16 @@ footer {
 
 #contacts_page_name_input {
     grid-area: name;
+    width: 90%;
 }
 
 #contacts_page_email_input {
     grid-area: email;
+    width: 90%;
 }
 #contacts_page_phone_input {
     grid-area: phone;
+    width: 90%;
 }
 #contacts_page_textarea {
     grid-area: textarea;
