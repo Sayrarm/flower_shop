@@ -59,7 +59,8 @@ body {
 .upper_nav_container,
 .center_nav_container,
 .contacts_page_nav_container,
-.contacts_page_container {
+.contacts_page_container,
+.discounts_container {
     max-width: 1115px;
     margin: 0 auto;
 }
@@ -1275,6 +1276,58 @@ footer {
     justify-self: end;
 }
 
+/******************************DISCOUNTS PAGE******************************************/
+
+.discounts {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-gray);
+}
+
+.discounts_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+.discounts_h2 {
+    font-family: var(--karton-regular), sans-serif;
+    font-size: 24px;
+    color: var(--brown);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.discount_card {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.discount_card_text {
+    font-family: var(--literal-regular), sans-serif;
+    padding: 10px 5px 20px 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discount_card_text_deadline {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.discount_card_text_deadline span,
+.discount_card_text_info span {
+    font-family: var(--literal-bold), sans-serif;
+}
+
+.discount_card_text_info {
+    font-size: 18px;
+    color: var(--brown);
+}
+
 /******************************MOBILE VERSION******************************************/
 
 @media (max-width: 1114px) {
@@ -1337,6 +1390,11 @@ footer {
     .contacts_page_info_block,
     .contacts_page_info_block span {
         font-size: 14px;
+    }
+
+    .discounts_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
