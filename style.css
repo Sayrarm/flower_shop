@@ -71,7 +71,7 @@ body {
     --gray: #828282;
     --white-gray: #F9F8FB;
     --yellow-gray: #F0F0F0;
-    --gray4: #BDBDBD;
+    --gray4: #d0d0d0;
     --shadow-brown: #A29BB4;
     --karton-regular: "Karton Regular", sans-serif;
     --literal-light: "Literal Light", sans-serif;
@@ -1115,6 +1115,7 @@ footer {
 
 .contacts_page_map > img {
     width: 100%;
+    height: 101%;
 }
 
 .contacts_page_call_us {
@@ -1128,6 +1129,11 @@ footer {
     font-size: 14px;
     color: var(--gray);
     gap: 5px;
+    padding-top: 10px;
+}
+
+.contacts_page_info_block_border {
+    border: 1px solid #dfdfdf;
 }
 
 .contacts_page_nav_container > a {
@@ -1232,16 +1238,16 @@ footer {
 
 #contacts_page_name_input {
     grid-area: name;
-    width: 90%;
+    width: 95%;
 }
 
 #contacts_page_email_input {
     grid-area: email;
-    width: 90%;
+    width: 95%;
 }
 #contacts_page_phone_input {
     grid-area: phone;
-    width: 90%;
+    width: 95%;
 }
 #contacts_page_textarea {
     grid-area: textarea;
