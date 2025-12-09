@@ -79,57 +79,62 @@
 </nav>
 
 <nav class="contacts_page_nav">
-    <a href="index.html">Главная</a>
-    <p> > </p>
-    <a href="contacts.html">Контакты</a>
+    <div class="contacts_page_nav_container">
+        <a href="index.html">Главная</a>
+        <p> > </p>
+        <a href="contacts.html">Контакты</a>
+    </div>
 </nav>
 
 <section class="contacts_page">
+    <div class="contacts_page_container">
+        <h2 class="contacts_page_h2">Контактная информация</h2>
 
-    <h2 class="contacts_page_h2">Контактная информация</h2>
-
-    <div>
-        <div class="contacts_page_info">
-            <div class="contacts_page_info_block">Моб. номер:
-                <span>+ 7 808 353 53 35</span>
-                <span>+ 7 888 888 88 88</span>
-            </div>
-            <div class="contacts_page_info_block">Эл. почта:
-                <span>flawka_vl@gmail.com</span>
-            </div>
-            <div class="contacts_page_info_block">Адрес:
-                <span>г. Владивосток,<br>
+        <div class="contacts_page_grid">
+            <div>
+                <div class="contacts_page_info">
+                    <div class="contacts_page_info_block">Моб. номер:
+                        <span>+ 7 808 353 53 35</span>
+                        <span>+ 7 888 888 88 88</span>
+                    </div>
+                    <div class="contacts_page_info_block">Эл. почта:
+                        <span>flawka_vl@gmail.com</span>
+                    </div>
+                    <div class="contacts_page_info_block">Адрес:
+                        <span>г. Владивосток,<br>
                     ул. Пушкинская, 17 А</span>
-            </div>
-            <div class="contacts_page_info_block">Режим работы:
-                <span>Пн-Сб с 8:00 до 22:00 <br>
+                    </div>
+                    <div class="contacts_page_info_block">Режим работы:
+                        <span>Пн-Сб с 8:00 до 22:00 <br>
                         Вс — выходной</span>
+                    </div>
+                </div>
+
+                <div class="contacts_page_map">
+                    <img src="images/contacts/map.svg" alt="map img">
+                </div>
+
+                <div class="contacts_page_call_us">
+                    <h3>Возникли вопросы? Свяжитесь с нами</h3>
+                    <form class="form_call_us" action="" method="POST">
+                        <fieldset class="fieldset_call_us">
+                            <label class="name_label" for="name_input">Ваше имя:</label>
+                            <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
+                                   placeholder="Иван">
+                        </fieldset>
+                        <fieldset class="fieldset_call_us">
+                            <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
+                            <input id="phone_input" type="text" name="phone" autocomplete="tel"
+                                   placeholder="+79999999999">
+                        </fieldset>
+                        <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
+                                  placeholder="Введите ваш комментарий..."></textarea>
+                        <input id="button_submit" type="submit" placeholder="Отправить">
+                    </form>
+                </div>
             </div>
-        </div>
-
-        <div class="contacts_page_map">
-            <img src="images/contacts/map.svg" alt="map img">
-        </div>
-
-        <div class="contacts_page_call_us">
-            <h3>Возникли вопросы? Свяжитесь с нами</h3>
-            <form class="form_call_us" action="" method="POST">
-                <fieldset class="fieldset_call_us">
-                    <label class="name_label" for="name_input">Ваше имя:</label>
-                    <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
-                           placeholder="Иван">
-                </fieldset>
-                <fieldset class="fieldset_call_us">
-                    <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
-                    <input id="phone_input" type="text" name="phone" autocomplete="tel" placeholder="+79999999999">
-                </fieldset>
-                <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
-                          placeholder="Введите ваш комментарий..."></textarea>
-                <input id="button_submit" type="submit" placeholder="Отправить">
-            </form>
         </div>
     </div>
-
 </section>
 
 <footer>
