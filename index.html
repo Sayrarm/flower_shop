@@ -636,11 +636,12 @@
                     <fieldset class="fieldset_call_us">
                         <label class="name_label" for="name_input">Ваше имя:</label>
                         <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
-                               placeholder="Иван">
+                               placeholder="Иван" required>
                     </fieldset>
                     <fieldset class="fieldset_call_us">
                         <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
-                        <input id="phone_input" type="text" name="phone" autocomplete="tel" placeholder="+79999999999">
+                        <input id="phone_input" type="tel" name="phone" autocomplete="tel" placeholder="+79999999999" pattern="^(\+7|8)[\-\s]?\(?\d{3}\)?[\-\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}$"
+                               title="Введите номер в формате: +79991234567 или 89991234567" required>
                     </fieldset>
                     <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
                               placeholder="Введите ваш комментарий..."></textarea>

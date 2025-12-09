@@ -115,21 +115,24 @@
                 </div>
 
                 <div class="contacts_page_call_us">
-                    <h3>Возникли вопросы? Свяжитесь с нами</h3>
-                    <form class="form_call_us" action="" method="POST">
-                        <fieldset class="fieldset_call_us">
-                            <label class="name_label" for="name_input">Ваше имя:</label>
-                            <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
-                                   placeholder="Иван">
+                    <h3>Остались вопросы? Свяжитесь с нами.</h3>
+                    <form class="contacts_page_form_call_us" action="" method="POST">
+                        <fieldset class="contacts_page_fieldset_call_us">
+                            <input class="contacts_page_name_input" type="text" id="contacts_page_name_input" name="name" autocomplete="given-name"
+                                   placeholder="Иван" required>
                         </fieldset>
-                        <fieldset class="fieldset_call_us">
-                            <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
-                            <input id="phone_input" type="text" name="phone" autocomplete="tel"
-                                   placeholder="+79999999999">
+                        <fieldset class="contacts_page_fieldset_call_us">
+                            <input id="contacts_page_email_input" type="email" name="email" autocomplete="email"
+                                   placeholder="ivan@email.com" required>
                         </fieldset>
-                        <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
+                        <fieldset class="contacts_page_fieldset_call_us">
+                            <input id="contacts_page_phone_input" type="tel" name="phone" autocomplete="tel"
+                                   placeholder="+79999999999" pattern="^(\+7|8)[\-\s]?\(?\d{3}\)?[\-\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}$"
+                                   title="Введите номер в формате: +79991234567 или 89991234567" required>
+                        </fieldset>
+                        <textarea class="contacts_page_textarea" name="comment" id="contacts_page_textarea" cols="20" rows="10"
                                   placeholder="Введите ваш комментарий..."></textarea>
-                        <input id="button_submit" type="submit" placeholder="Отправить">
+                        <input id="contacts_page_button_submit" type="submit" placeholder="Отправить">
                     </form>
                 </div>
             </div>
@@ -184,11 +187,12 @@
                     <fieldset class="fieldset_call_us">
                         <label class="name_label" for="name_input">Ваше имя:</label>
                         <input class="name_input" type="text" id="name_input" name="name" autocomplete="given-name"
-                               placeholder="Иван">
+                               placeholder="Иван" required>
                     </fieldset>
                     <fieldset class="fieldset_call_us">
                         <label class="phone_label" for="phone_input">Ваш моб. номер:</label>
-                        <input id="phone_input" type="text" name="phone" autocomplete="tel" placeholder="+79999999999">
+                        <input id="phone_input" type="tel" name="phone" autocomplete="tel" placeholder="+79999999999" pattern="^(\+7|8)[\-\s]?\(?\d{3}\)?[\-\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}$"
+                               title="Введите номер в формате: +79991234567 или 89991234567" required>
                     </fieldset>
                     <textarea class="textarea" name="comment" id="textarea" cols="20" rows="10"
                               placeholder="Введите ваш комментарий..."></textarea>

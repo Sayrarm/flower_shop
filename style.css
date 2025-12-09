@@ -1020,6 +1020,7 @@ footer {
 .name_input,
 #phone_input,
 #button_submit,
+#contacts_page_button_submit,
 .textarea {
     border: none;
     padding: 5px;
@@ -1029,7 +1030,8 @@ footer {
     font-family: var(--literal-regular), sans-serif;
 }
 
-#button_submit:hover {
+#button_submit:hover,
+#contacts_page_button_submit:hover {
     background-color: var(--brown);
 }
 
@@ -1050,7 +1052,8 @@ footer {
     margin-bottom: 15px;
 }
 
-#button_submit {
+#button_submit,
+#contacts_page_button_submit {
     grid-area: submit;
     background-color: var(--green);
     font-family: var(--literal-bold), sans-serif;
@@ -1120,18 +1123,20 @@ footer {
     align-items: center;
 }
 
-.contacts_page_info {
+.contacts_page_info,
+.contacts_page_call_us {
     background-color: white;
     border-radius: 10px;
-    font-family: var(--literal-regular), sans-serif;
-    font-size: 14px;
-    color: var(--gray);
+
 }
 
 .contacts_page_info_block {
     display: flex;
     flex-direction: column;
     padding: 20px 10px;
+    font-family: var(--literal-regular), sans-serif;
+    font-size: 14px;
+    color: var(--gray);
 }
 
 .contacts_page_info_block span {
@@ -1140,7 +1145,22 @@ footer {
     color: var(--brown);
 }
 
+.contacts_page_call_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.contacts_page_call_us >  h3 {
+    font-family: var(--literal-bold), sans-serif;
+    font-size: 18px;
+    color: var(--brown);
+}
+
+.contacts_page_fieldset_call_us {
+    border: none;
+    background: none;
+}
 
 /******************************MOBILE VERSION******************************************/
 
