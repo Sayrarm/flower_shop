@@ -1016,6 +1016,7 @@ footer {
 .textarea {
     grid-area: textarea;
     height: 70px;
+    color: var(--gray);
 }
 
 .name_input,
@@ -1027,7 +1028,6 @@ footer {
     border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.2s;
-    color: var(--gray);
     font-family: var(--literal-regular), sans-serif;
 }
 
