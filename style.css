@@ -1284,6 +1284,10 @@ footer {
     background-color: var(--white-gray);
 }
 
+.discounts_container {
+    padding: 5px;
+}
+
 .discounts_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1303,6 +1307,10 @@ footer {
 .discount_card {
     background-color: white;
     border-radius: 10px;
+}
+
+.discount_card > img {
+    width: 100%;
 }
 
 .discount_card_text {
@@ -1484,6 +1492,11 @@ footer {
 
     #contacts_page_button_submit {
         width: auto;
+    }
+
+    .discounts_cards {
+        display: flex;
+        flex-direction: column;
     }
 }
 
