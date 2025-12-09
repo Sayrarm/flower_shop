@@ -1239,7 +1239,6 @@ footer {
 }
 
 .contacts_page_form_call_us {
-    position: relative;
     width: 100%;
     height: 220px;
     display: grid;
@@ -1272,10 +1271,8 @@ footer {
 #contacts_page_button_submit {
     grid-area: submit;
     width: 30%;
-    position: absolute;
-    right: 0;
-    bottom: 5%;
     color: white;
+    justify-self: end;
 }
 
 /******************************MOBILE VERSION******************************************/
@@ -1452,10 +1449,22 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .contacts_page_h2 {
+        margin-top: 20px;
+    }
+
     .contacts_page_form_call_us {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin-bottom: 20px;
+        padding: 20px 5px;
+    }
+
+    #contacts_page_textarea {
+        min-height: 80px;
+        width: 100%;
+        resize: vertical;
     }
 
     #contacts_page_name_input,
@@ -1465,13 +1474,8 @@ footer {
         width: 100%;
     }
 
-    #contacts_page_textarea {
-        height: 128px;
-    }
-
     #contacts_page_button_submit {
-        position: unset;
-        width: 50%;
+        width: 100%;
         height: 100%;
     }
 }
