@@ -1115,7 +1115,9 @@ footer {
 
 .contacts_page_map > img {
     width: 100%;
-    height: 101%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .contacts_page_call_us {
@@ -1168,6 +1170,7 @@ footer {
 .contacts_page_info_block {
     display: flex;
     flex-direction: column;
+    word-break: break-all;
     padding: 20px 10px;
     font-family: var(--literal-regular), sans-serif;
     font-size: 14px;
@@ -1305,6 +1308,19 @@ footer {
     footer {
         padding: 10px;
     }
+
+    .contacts_page_nav_container {
+        padding-left: 5px;
+    }
+
+    .contacts_page_grid {
+        padding: 5px;
+    }
+
+    .contacts_page_info_block,
+    .contacts_page_info_block span {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 925px) {
@@ -1342,6 +1358,11 @@ footer {
         grid-area: block_3;
     }
 
+    .contacts_page_grid {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -1385,6 +1406,10 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    #contacts_page_button_submit {
+        width: auto;
+    }
 }
 
 @media (max-width: 530px) {
@@ -1405,6 +1430,29 @@ footer {
     .product_cards_items {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contacts_page_form_call_us {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #contacts_page_name_input,
+    #contacts_page_email_input,
+    #contacts_page_phone_input,
+    #contacts_page_textarea {
+        width: 100%;
+    }
+
+    #contacts_page_textarea {
+        height: 128px;
+    }
+
+    #contacts_page_button_submit {
+        position: unset;
+        width: 50%;
+        height: 100%;
     }
 }
 
